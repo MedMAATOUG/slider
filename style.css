@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+section{
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+section h1{
+  position: relative;
+  width: 160px;
+  margin: auto;
+
+}
+section h1::before{
+  content: 'Image';
+  background-color: #F9B208;
+  padding: 0 2px ;
+  color: #fff;
+}
+section h1::after{
+  content: " ";
+  background-color: #F9B208;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 3px ;
+  right: -7px;
+}
+
+.slide-container .prev,
+.slide-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: #F9B208;
+}
+
+.slide-container .prev:hover,
+.slide-container .next:hover {
+ transform: scale(1.05);
+}
+
+.slide-container .prev {
+  left: 2px;
+}
+
+.slide-container .next {
+  right: 2px;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform:translateX(-50%) ;
+}
+
+.dots-container .dot {
+  cursor: pointer;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  color: #333;
+  border-radius: 50%;
+  background-color: #dfd6ce;
+}
+
+.dots-container .dot.active {
+  background-color:  #F9B208;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+body h1 {
+  text-align: center;
+}
+
+.slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.slide-container .slide {
+  display: none;
+  width: 100%;
+  
+}
+
+.slide-container .slide.fade {
+  animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.slide-container .slide img {
+  width: 700px;
+  height: 500px;
+}
+
+h1{
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
