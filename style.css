@@ -4,11 +4,17 @@ section{
   margin: auto;
   display: flex;
   flex-direction: column;
+  animation: Fade 1.5s ease-in ;
+
+
+
 }
 section h1{
   position: relative;
   width: 160px;
   margin: auto;
+  -webkit-animation: fade 5s infinite alternate; ;
+
 
 }
 section h1::before{
@@ -123,4 +129,10 @@ body h1 {
 h1{
   font-family: 'Open Sans', sans-serif;
   color: #333;
+}
+@keyframes Fade {
+  0%{ opacity: 0;
+    transform : translateY(-10%)}
+    100%{ opacity: 1;
+      transform : translateY(0)}
 }
